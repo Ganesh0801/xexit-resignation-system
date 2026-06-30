@@ -11,9 +11,9 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api", apiRoutes);
-
+console.log("mongo_uri", process.env.MONGO_URI);
 mongoose
-  .connect(process.env.MONGODB_URI)
+  .connect(process.env.MONGO_URI)
   .then(() => {
     console.log("MongoDB Database Connected Successfully!");
     app.listen(PORT, () => console.log(`XExit Backend Engine listening on Port ${PORT}!`));
