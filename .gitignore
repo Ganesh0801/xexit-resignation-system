@@ -1,0 +1,12 @@
+# Ignore dependency directories
+assessment/node_modules/
+frontend/node_modules/
+node_modules/
+
+# Ignore local environment variables (security)
+.env
+assessment/.env
+frontend/.env
+
+# Ignore production build outputs
+frontend/dist/s
